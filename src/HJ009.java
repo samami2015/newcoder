@@ -2,23 +2,36 @@ import java.util.*;
 import java.io.*;
 import java.util.Collections;
 
+/**
+ * 【提取不重复的整数】
+ * 描述
+ * 输入一个int型整数，按照从右向左的阅读顺序，返回一个不含重复数字的新的整数。
+ * 保证输入的整数最后一位不是0。
+ * 输入描述：
+ * 输入一个int型整数
+ *
+ * 输出描述：
+ * 按照从右向左的阅读顺序，返回一个不含重复数字的新的整数
+ *
+ * 示例1
+ * 输入：
+ * 9876673
+ * 输出：
+ * 37689
+ */
 public class HJ009 {
     public static void main(String[] args) throws IOException {
-        BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String input;
-        while ((input = bf.readLine()) != null) {
-            //char[] arr=input.toCharyArray();
-            char[] arr = input.toCharArray();
-            StringBuffer str = new StringBuffer();
-            int[] afs = new int[10];
-            for (int i = arr.length - 1; i >= 0; i--) {
-                if (afs[arr[i] - '0'] != 0) {
-                } else {
-                    str.append(arr[i]);
-                    afs[arr[i] - '0']++;
+        while ((input = br.readLine()) != null) {
+            char[] chars = input.toCharArray();
+            String str = "";
+            for (int i = chars.length - 1; i >= 0; i--) {
+                if (!str.contains(chars[i] + "")) {
+                    str += chars[i];
                 }
             }
-            System.out.println(str.toString());
+            System.out.println(str);
         }
     }
 }
