@@ -22,18 +22,18 @@ public class HJ101 {
             for (int i = 0; i < input.length; i++) {
                 num[i] = Integer.parseInt(input[i]);
             }
-            quickSort(num,0,num.length - 1);
+            quickSort(num, 0, num.length - 1);
             StringBuilder sb = new StringBuilder();
-            if(flag == 0){
+            if (flag == 0) {
                 for (int j = 0; j < num.length; j++) {
                     sb.append(num[j]).append(" ");
                 }
-            }else{
+            } else {
                 for (int k = num.length - 1; k >= 0; k--) {
                     sb.append(num[k]).append(" ");
                 }
             }
-            System.out.println(sb.substring(0,sb.length()-1));
+            System.out.println(sb.substring(0, sb.length() - 1));
         }
 
     }
@@ -44,7 +44,7 @@ public class HJ101 {
         }
         int p = partition(num, L, R);
         quickSort(num, L, p - 1);
-        quickSort(num, p+1, R);
+        quickSort(num, p + 1, R);
     }
 
     public static int partition(int[] num, int L, int R) {
@@ -59,7 +59,7 @@ public class HJ101 {
             }
         }
         int tt = num[pivot];
-        num[pivot] = num [L];
+        num[pivot] = num[L];
         num[L] = tt;
         return pivot;
     }

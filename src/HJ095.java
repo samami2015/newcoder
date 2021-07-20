@@ -1,8 +1,9 @@
 import java.io.*;
 
 public class HJ095 {
-    public static final String[] convert = new String[] {"零", "壹", "贰", "叁", "肆", "伍", "陆", "柒", "捌", "玖", "拾", "佰",
+    public static final String[] convert = new String[]{"零", "壹", "贰", "叁", "肆", "伍", "陆", "柒", "捌", "玖", "拾", "佰",
             "仟", "万", "亿"};
+
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String str = null;
@@ -16,26 +17,26 @@ public class HJ095 {
             char[] s = params[0].toCharArray();
             StringBuilder ans = new StringBuilder();
             boolean is_zero = true;
-            for (int i = s.length-1; i >= 0; i--) {
+            for (int i = s.length - 1; i >= 0; i--) {
                 if (s[i] == '0') {
                     if (!is_zero) {
                         ans.append(convert[0]);
                         is_zero = true;
                     }
-                } else if (s[i] == '1' && (s.length-1-i) % 4 == 1) {
+                } else if (s[i] == '1' && (s.length - 1 - i) % 4 == 1) {
                     ans.append(convert[10]);
                     is_zero = false;
                 } else {
-                    int temp = (s.length-1-i) % 4;
+                    int temp = (s.length - 1 - i) % 4;
                     if (temp == 1) ans.append(convert[10]);
                     else if (temp == 2) ans.append(convert[11]);
                     else if (temp == 3) ans.append(convert[12]);
-                    else if (s.length-1-i > 0) {
-                        int pos = ((s.length-1-i) / 4) % 2;
+                    else if (s.length - 1 - i > 0) {
+                        int pos = ((s.length - 1 - i) / 4) % 2;
                         if (pos == 1) ans.append(convert[13]);
                         else ans.append(convert[14]);
                     }
-                    ans.append(convert[s[i]-'0']);
+                    ans.append(convert[s[i] - '0']);
                     is_zero = false;
                 }
             }
@@ -43,12 +44,12 @@ public class HJ095 {
             if (ans.length() != 0) res = res + ans.reverse().toString() + "元";
             if (params[1].equals("00")) System.out.println(res + "整");
             else if (params[1].charAt(1) == '0')
-                System.out.println(res + convert[params[1].charAt(0)-'0'] + "角");
+                System.out.println(res + convert[params[1].charAt(0) - '0'] + "角");
             else if (params[1].charAt(0) == '0')
-                System.out.println(res + convert[params[1].charAt(1)-'0'] + "分");
+                System.out.println(res + convert[params[1].charAt(1) - '0'] + "分");
             else
-                System.out.println(res + convert[params[1].charAt(0)-'0'] + "角"
-                        + convert[params[1].charAt(1)-'0'] + "分");
+                System.out.println(res + convert[params[1].charAt(0) - '0'] + "角"
+                        + convert[params[1].charAt(1) - '0'] + "分");
         }
     }
 }

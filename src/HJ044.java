@@ -12,7 +12,7 @@ public class HJ044 {
             for (int j = 0; j < 9; j++) {
                 sudoku[0][j] = Integer.parseInt(params[j]);
             }
-            for (int i = 1; i < 9; i++){
+            for (int i = 1; i < 9; i++) {
                 params = br.readLine().split(" ");
                 for (int j = 0; j < 9; j++) {
                     sudoku[i][j] = Integer.parseInt(params[j]);
@@ -33,7 +33,8 @@ public class HJ044 {
     public static boolean dfs(int[][] sudoku) {
         // 寻找第一个0数字，若无，返回true
         int i = 0, j = 0;
-        search: for (; i < 9; i++) {
+        search:
+        for (; i < 9; i++) {
             for (j = 0; j < 9; j++) {
                 if (sudoku[i][j] == 0) break search;
             }
