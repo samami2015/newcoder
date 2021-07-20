@@ -2,6 +2,33 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+/**
+ * 【密码验证合格程序】
+ * 描述
+ * 密码要求:
+ * 1.长度超过8位
+ * 2.包括大小写字母.数字.其它符号,以上四种至少三种
+ * 3.不能有相同长度大于2的子串重复
+ * <p>
+ * 输入描述：
+ * 一组或多组长度超过2的字符串。每组占一行
+ * <p>
+ * 输出描述：
+ * 如果符合要求输出：OK，否则输出NG
+ * <p>
+ * 示例1
+ * 输入：
+ * 021Abc9000
+ * 021Abc9Abc1
+ * 021ABC9000
+ * 021$bc9000
+ * 复制
+ * 输出：
+ * OK
+ * NG
+ * NG
+ * OK
+ */
 // 密码验证合格程序
 public class HJ020 {
     public static void main(String[] args) throws IOException {

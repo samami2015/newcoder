@@ -1,5 +1,22 @@
 import java.io.InputStream;
 
+/**
+ * 【求int型正整数在内存中存储时1的个数】
+ * 描述
+ * 输入一个int型的正整数，计算出该int型数据在内存中存储时1的个数。
+ * <p>
+ * 输入描述：
+ * 输入一个整数（int类型）
+ * <p>
+ * 输出描述：
+ * 这个数转换成2进制后，输出1的个数
+ * <p>
+ * 示例1
+ * 输入：
+ * 5
+ * 输出：
+ * 2
+ */
 public class HJ015 {
     public static void main(String[] args) throws Exception {
         InputStream stream = System.in;
