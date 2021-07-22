@@ -1,6 +1,23 @@
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
+/**
+ * 【统计每个月兔子的总数】
+ * 描述
+ * 有一只兔子，从出生后第3个月起每个月都生一只兔子，小兔子长到第三个月后每个月又生一只兔子，假如兔子都不死，问每个月的兔子总数为多少？
+ * 本题有多组数据。
+ * 输入描述：
+ * 输入int型表示month
+ * <p>
+ * 输出描述：
+ * 输出兔子总数int型
+ * <p>
+ * 示例1
+ * 输入：
+ * 9
+ * 输出：
+ * 34
+ */
 public class HJ037 {
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
