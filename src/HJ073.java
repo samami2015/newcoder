@@ -2,6 +2,25 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+/**
+ * 【计算日期到天数转换】
+ * 描述
+ * 根据输入的日期，计算是这一年的第几天。
+ * 输入描述：
+ * 输入一行，每行空格分割，分别是年，月，日
+ * 输出描述：
+ * 输出是这一年的第几天
+ * 示例1
+ * 输入：
+ * 2012 12 31
+ * 输出：
+ * 366
+ * 示例2
+ * 输入：
+ * 1982 3 4
+ * 输出：
+ * 63
+ */
 public class HJ073 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
