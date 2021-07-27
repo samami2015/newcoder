@@ -2,6 +2,25 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+/**
+ * 【最长回文子串】
+ * 描述
+ * 给定一个仅包含小写字母的字符串，求它的最长回文子串的长度。
+ * 所谓回文串，指左右对称的字符串。
+ * 所谓子串，指一个字符串删掉其部分前缀和后缀（也可以不删）的字符串
+ * （注意：记得加上while处理多个测试用例）
+ * 输入描述：
+ * 输入一个仅包含小写字母的字符串
+ * 输出描述：
+ * 返回最长回文子串的长度
+ * 示例1
+ * 输入：
+ * cdabbacc
+ * 输出：
+ * 4
+ * 说明：
+ * abba为最长的回文子串
+ */
 public class HJ085 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -51,6 +70,6 @@ public class HJ085 {
                 }
             }
         }
-        System.out.println(max1 > max2 ? max1 : max2);
+        System.out.println(Math.max(max1, max2));
     }
 }
