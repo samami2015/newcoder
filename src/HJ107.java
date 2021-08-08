@@ -1,5 +1,21 @@
 import java.io.*;
 
+/**
+ * 【求解立方根】
+ * 描述
+ * 计算一个数字的立方根，不使用库函数。
+ * 保留一位小数。
+ * 输入描述：
+ * 待求解参数，为double类型（一个实数）
+ * 输出描述：
+ * 输入参数的立方根。保留一位小数。
+ * 示例1
+ * 输入：
+ * 216
+ * 复制
+ * 输出：
+ * 6.0
+ */
 public class HJ107 {
     public static void main(String[] args) throws IOException {
         InputStream in = System.in;
